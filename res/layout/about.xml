@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:text="源码地址："
-        android:textSize="40sp" />
+        android:text="http://git.oschina.net/xinruodingshui/Recorder.git"
+        android:textSize="18sp" />
 
 </RelativeLayout>
