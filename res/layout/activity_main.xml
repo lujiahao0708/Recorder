@@ -53,13 +53,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+         >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/button_status"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="L.Recoder"
+            android:text="L.Recorder"
             android:textSize="30sp"
             android:textColor="#3B8548"
             android:background="@android:color/transparent" />
@@ -69,7 +76,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        
         android:layout_weight="0.3"
         android:orientation="horizontal" >
 
@@ -79,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:src="@drawable/abc_ic_clear_normal"
+            android:src="@drawable/email"
             android:background="@android:color/transparent" />
 
         <ImageButton
@@ -88,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:src="@drawable/abc_ic_voice_search"
+            android:src="@drawable/mic"
             android:background="@android:color/transparent" />
 
         <ImageButton
@@ -97,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:src="@drawable/abc_ic_go"
+            android:src="@drawable/stop"
             android:background="@android:color/transparent" />
 
         <ImageButton
@@ -106,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:src="@drawable/abc_ic_cab_done_holo_dark"
+            android:src="@drawable/list"
             android:background="@android:color/transparent" />
 
     </LinearLayout>

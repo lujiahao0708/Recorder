@@ -19,10 +19,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
@@ -74,15 +76,16 @@ public class MainActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_main);
 
 		// 实例化底栏的按钮
-		ImageButton imageButton_about = (ImageButton) this
+		imageButton_about = (ImageButton) this
 				.findViewById(R.id.imageButton_about);
-		ImageButton imageButton_recorderlist = (ImageButton) this
+		imageButton_recorderlist = (ImageButton) this
 				.findViewById(R.id.imageButton_recorderlist);
-		ImageButton imageButton_recorde = (ImageButton) this
+		imageButton_recorde = (ImageButton) this
 				.findViewById(R.id.imageButton_recorde);
-		ImageButton imageButton_stop = (ImageButton) this
+		imageButton_stop = (ImageButton) this
 				.findViewById(R.id.imageButton_stop);
 		final Button button_status = (Button)this.findViewById(R.id.button_status);
+		
 		
 		//获取界面的控件
         minText = (TextView) findViewById(R.id.min);
@@ -137,6 +140,10 @@ public class MainActivity extends ActionBarActivity {
 					mediaRecorder.setOutputFile(soundFile.getAbsolutePath());
 					mediaRecorder.prepare(); // **准备录音**
 					mediaRecorder.start(); // **开始录音**
+					
+					//即使之前时间清零
+					minText.setText("00");
+					secText.setText("00");
 					button_status.setText("正在录音...");
 					
 					//开始计时
@@ -165,15 +172,16 @@ public class MainActivity extends ActionBarActivity {
 					isPaused = true;
 					timeUsedInsec = 0;
 					
-					
 					mediaRecorder.release(); // **释放资源**
 					mediaRecorder = null;
+
 				}
 			}
 		});
 		
 		
 	}
+
 
 	
 	@Override
@@ -237,5 +245,7 @@ public class MainActivity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+	
 
 }

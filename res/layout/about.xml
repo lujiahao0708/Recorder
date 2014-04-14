@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#1B1C21" >
 
     <TextView
         android:id="@+id/textView1"
@@ -12,7 +13,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="152dp"
         android:text="路家豪"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:textColor="#3B8548" />
     
     <TextView
         android:id="@+id/textView2"
@@ -21,6 +23,16 @@
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:text="http://git.oschina.net/xinruodingshui/Recorder.git"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textColor="#3B8548" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/running" />
 
 </RelativeLayout>
